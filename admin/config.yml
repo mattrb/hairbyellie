@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main # Change to 'master' if your main git branch is called master
+
+media_folder: "assets/images" # Folder where uploaded images are saved
+public_folder: "/assets/images" # How images are referenced in your code
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "" # Leave empty if your Markdown files (like index.md or about.md) are in the root folder
+    extension: "md"
+    create: false # Prevents creating new pages, you will only edit existing ones
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
