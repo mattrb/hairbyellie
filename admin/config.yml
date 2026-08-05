@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: main # Change to 'master' if your main git branch is called master
+  branch: master # Change to 'master' if your main git branch is called master
 
 media_folder: "assets/images" # Folder where uploaded images are saved
 public_folder: "/assets/images" # How images are referenced in your code
