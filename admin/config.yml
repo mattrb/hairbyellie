@@ -7,10 +7,10 @@ public_folder: "img" # How images are referenced in your code
 
 collections:
   - name: "pages"
-    label: "Pages"
-    folder: "" # Leave empty if your Markdown files (like index.md or about.md) are in the root folder
-    extension: "md"
-    create: false # Prevents creating new pages, you will only edit existing ones
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+    label: "Website Pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "index.html"
+        fields:
+          - {label: "Page Content", name: "body", widget: "markdown"}
