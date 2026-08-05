@@ -1,16 +1,47 @@
 backend:
   name: git-gateway
-  branch: master # Change to 'master' if your main git branch is called master
+  branch: master # (or main, depending on what worked for you earlier)
 
-media_folder: "img" # Folder where uploaded images are saved
-public_folder: "img" # How images are referenced in your code
+media_folder: "img"
+public_folder: "/img"
 
 collections:
   - name: "pages"
     label: "Website Pages"
     files:
-      - label: "Home Page"
+      - label: "Edit Home Page"
         name: "home"
         file: "index.html"
         fields:
-          - {label: "Page Content", name: "body", widget: "markdown"}
+          - {label: "Header - Main Title", name: "hero_title", widget: "string"}
+          - {label: "Header - Subtitle", name: "hero_subtitle", widget: "string"}
+          - {label: "Whatsapp Link URL", name: "whatsapp_link", widget: "string"}
+          
+          - {label: "Section 1 - Title", name: "section_1_title", widget: "string"}
+          - {label: "Section 1 - Text", name: "section_1_body", widget: "markdown"}
+          
+          - {label: "Section 2 (Haircuts) - Title", name: "section_2_title", widget: "string"}
+          - {label: "Section 2 (Haircuts) - Text", name: "section_2_body", widget: "markdown"}
+          
+          - {label: "Section 3 (Blonding) - Title", name: "section_3_blonding_title", widget: "string"}
+          - {label: "Section 3 (Blonding) - Text", name: "section_3_blonding_body", widget: "markdown"}
+          
+          - {label: "Section 3 (Bridal) - Title", name: "section_3_bridal_title", widget: "string"}
+          - {label: "Section 3 (Bridal) - Text", name: "section_3_bridal_body", widget: "markdown"}
+          
+          - {label: "Section 3 (Family) - Title", name: "section_3_family_title", widget: "string"}
+          - {label: "Section 3 (Family) - Text", name: "section_3_family_body", widget: "markdown"}
+          
+          - {label: "Section 4 (About) - Title", name: "section_4_about_title", widget: "string"}
+          - {label: "Section 4 (About) - Text", name: "section_4_about_body", widget: "markdown"}
+          
+          - {label: "Prices - Title", name: "pricing_title", widget: "string"}
+          - {label: "Prices - Text", name: "pricing_body", widget: "markdown"}
+          
+          - {label: "FAQ - Title", name: "faq_title", widget: "string"}
+          - {label: "FAQ - Text", name: "faq_body", widget: "markdown"}
+          
+          - {label: "Footer Copyright text", name: "footer_text", widget: "string"}
+          
+          # Hides the raw HTML body from the editor
+          - {label: "Body", name: "body", widget: "hidden", required: false}
